@@ -63,7 +63,7 @@ delete_all () {
 
 ##### IMPORT REPO & CLEAN UP
 git_clone () {
-    git clone --bare 'https://x-token-auth:'"$token_b"'@bitbucket.org/tribalddbdubai/'"$1"'.git'
+    git clone --bare 'https://x-token-auth:'"$token_b"'@bitbucket.org/'"$user_b"'/'"$1"'.git'
 }
 git_push () {
     cd "$1"'.git' && git push --mirror 'git@github.com:'"$user_g"'/'"$1"'.git'
